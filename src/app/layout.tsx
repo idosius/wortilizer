@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Wörtilizer",
-  description: "Zaps your German vocab into shape, one word at a time ⚡🇩🇪",
+  description: "Zaps your German vocab into shape ⚡🇩🇪",
 };
 
 export default function RootLayout({
