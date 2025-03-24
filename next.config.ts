@@ -1,8 +1,8 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   // Reference: https://nextjs.org/docs/app/building-your-application/deploying/static-exports
-  output: "export",
-};
+  output: 'export',
+}
 
-export default nextConfig;
+export default nextConfig

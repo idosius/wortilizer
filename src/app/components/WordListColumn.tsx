@@ -1,18 +1,18 @@
 import {
   GermanNounArticle,
   WortschatzEntry,
-} from "@/app/types/wortilizer.types";
+} from '@/app/types/wortilizer.types'
 
 type WordListProps = {
-  article: GermanNounArticle;
-  wortschatzEntries: WortschatzEntry[];
-};
+  article: GermanNounArticle
+  wortschatzEntries: WortschatzEntry[]
+}
 
 const articleToClassName: Record<GermanNounArticle, string> = {
-  der: "bg-blue-100",
-  die: "bg-red-100",
-  das: "bg-green-100",
-};
+  der: 'bg-blue-100',
+  die: 'bg-red-100',
+  das: 'bg-green-100',
+}
 
 export default function WordListColumn({
   article,
@@ -29,5 +29,5 @@ export default function WordListColumn({
         ))}
       </ul>
     </section>
-  );
+  )
 }

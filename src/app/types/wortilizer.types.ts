@@ -1,9 +1,9 @@
-export type GermanNounArticle = "der" | "die" | "das";
+export type GermanNounArticle = 'der' | 'die' | 'das'
 
 export type WortschatzEntry = {
-  word: string;
-  article: GermanNounArticle;
-  createdAt: string;
-};
+  word: string
+  article: GermanNounArticle
+  createdAt: string
+}
 
-export type Wortschatz = Record<GermanNounArticle, WortschatzEntry[]>;
+export type Wortschatz = Record<GermanNounArticle, WortschatzEntry[]>

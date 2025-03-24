@@ -1,17 +1,17 @@
-"use client";
+'use client'
 
-import { Button } from "@/app/components/ui/button";
-import { Input } from "@/app/components/ui/input";
+import { Button } from '@/app/components/ui/button'
+import { Input } from '@/app/components/ui/input'
 
 type WordFormProps = {
-  onAddWordAction: (word: string) => void;
-};
+  onAddWordAction: (word: string) => void
+}
 
 export default function WordForm({ onAddWordAction }: WordFormProps) {
   function handleSubmit(formData: FormData) {
-    const word = formData.get("word");
+    const word = formData.get('word')
     if (word) {
-      onAddWordAction(word as string);
+      onAddWordAction(word as string)
     }
   }
 
@@ -27,5 +27,5 @@ export default function WordForm({ onAddWordAction }: WordFormProps) {
         + Wort
       </Button>
     </form>
-  );
+  )
 }
