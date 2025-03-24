@@ -1,11 +1,8 @@
-import {
-  GermanNounArticle,
-  WortschatzEntry,
-} from '@/app/types/wortilizer.types'
+import { GermanNounArticle, Wortschatz } from '@/app/types/wortilizer.types'
 
 type WordListProps = {
   article: GermanNounArticle
-  wortschatzEntries: WortschatzEntry[]
+  wortschatz: Wortschatz
 }
 
 const articleToClassName: Record<GermanNounArticle, string> = {
@@ -14,17 +11,14 @@ const articleToClassName: Record<GermanNounArticle, string> = {
   das: 'bg-green-100',
 }
 
-export default function WordListColumn({
-  article,
-  wortschatzEntries,
-}: WordListProps) {
+export default function WordListColumn({ article, wortschatz }: WordListProps) {
   return (
     <section
       className={`flex flex-col gap-2 ${articleToClassName[article]} pt-2 pb-4 px-4 rounded-2xl`}
     >
       <h2 className="text-2xl underline">{article}</h2>
       <ul className="flex flex-col gap-2">
-        {wortschatzEntries.map(({ word }) => (
+        {wortschatz[article].map(({ word }) => (
           <li key={word}>{word}</li>
         ))}
       </ul>
