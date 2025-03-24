@@ -4,7 +4,7 @@
   "private": true,
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
-    "(*.ts|*.tsx)": "next lint"
+    "*.{ts,tsx}": "next lint"
   },
   "scripts": {
     "dev": "next dev --turbopack",
