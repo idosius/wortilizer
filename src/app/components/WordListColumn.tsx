@@ -28,7 +28,7 @@ export default function WordListColumn({ article, wortschatz }: WordListProps) {
         <h2 className="text-2xl underline">{article}</h2>
         <p className="text-sm">({currentWortschatz.length})</p>
       </header>
-      {currentWortschatz.length === 0 && <p>Nothing words here yet</p>}
+      {currentWortschatz.length === 0 && <p>Keine wörter gerade hier</p>}
       {currentWortschatz.length > 0 && (
         <ul className="flex flex-col gap-2 max-h-[300px] overflow-y-auto">
           {currentWortschatz.map(({ word }) => (
