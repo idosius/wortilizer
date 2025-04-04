@@ -4,6 +4,10 @@ Wörtilizer is an open source web app to help you build your German vocabulary a
 
 I built it to solve my own problem and also exercise some coding while being in between jobs.
 
+## Demo
+
+https://wortilizer.vercel.app/
+
 ## Setup
 
 ```bash
