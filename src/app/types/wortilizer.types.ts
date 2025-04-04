@@ -6,4 +6,4 @@ export type WortschatzEntry = {
   createdAt: string
 }
 
-export type Wortschatz = Record<GermanNounArticle, WortschatzEntry[]>
+export type Wortschatz = WortschatzEntry[]

@@ -26,7 +26,7 @@ function getWordArticle(word: string) {
 export default function Wortilizer() {
   const [wortschatz, saveWortschatz] = useLocalStorage<Wortschatz>(
     'wortschatz',
-    { der: [], die: [], das: [] }
+    []
   )
 
   function handleAddWordAction(word: string) {
@@ -37,10 +37,7 @@ export default function Wortilizer() {
       return
     }
 
-    const articleWortschatz = wortschatz[article]
-    if (
-      articleWortschatz.find((wortschatzEntry) => wortschatzEntry.word === word)
-    ) {
+    if (wortschatz.find((wortschatzEntry) => wortschatzEntry.word === word)) {
       console.error('Word exists in vocabulary')
       return
     }
@@ -50,11 +47,8 @@ export default function Wortilizer() {
       article,
       createdAt: new Date().toISOString(),
     }
-    const newWortschatz: Wortschatz = {
-      ...wortschatz,
-      [article]: [wortschatzEntry, ...articleWortschatz],
-    }
-    saveWortschatz(newWortschatz)
+
+    saveWortschatz([wortschatzEntry, ...wortschatz])
   }
 
   return (
