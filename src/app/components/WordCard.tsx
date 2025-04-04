@@ -19,7 +19,7 @@ export default function WordCard({
 }: WordCardProps) {
   return (
     <article
-      className={`animate-wiggle flex rounded justify-center items-center h-30 text-2xl text-blue-900 capitalize border ${articleToClassName[article]}`}
+      className={`animate-wiggle flex rounded justify-center items-center h-30 text-2xl text-blue-900 capitalize border transition-all ${articleToClassName[article]}`}
     >
       {article} {word}
     </article>
