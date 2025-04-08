@@ -20,7 +20,7 @@ export default function WordForm({ onAddWordAction }: WordFormProps) {
       <Input
         className="px-4"
         name="word"
-        placeholder="Deutsches Wort eingeben"
+        placeholder="Deutsches Wort eingeben, z.B. Brief"
         required
       />
       <Button className="px-4 py-2" type="submit">

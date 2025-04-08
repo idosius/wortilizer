@@ -37,11 +37,21 @@ export default function Wortilizer() {
       return
     }
 
-    if (wortschatz.find((wortschatzEntry) => wortschatzEntry.word === word)) {
-      console.error('Word exists in vocabulary')
+    // If a word is already in the vocab, move it to first position
+    const foundWortschatzEntry = wortschatz.find(
+      (wortschatzEntry) => wortschatzEntry.word === word
+    )
+    if (foundWortschatzEntry) {
+      saveWortschatz((prevWortschatz) => {
+        const restPrevWortschatz = prevWortschatz.filter(
+          (wortschatzEntry) => wortschatzEntry.word !== word
+        )
+        return [foundWortschatzEntry, ...restPrevWortschatz]
+      })
       return
     }
 
+    // All good, just add the word
     const wortschatzEntry: WortschatzEntry = {
       word,
       article,
