@@ -7,6 +7,7 @@ import { Genders, WordsInfo } from 'german-words-dict'
 import { getGenderGermanWord } from 'german-words'
 import GermanWordsList from 'german-words-dict/dist/words.json'
 import { useLocalStorage } from '@uidotdev/usehooks'
+import { moveIndexToFirst } from '@/app/utils/array'
 
 const genderArticles: Record<Genders, WortschatzEntry['article']> = {
   M: 'der',
@@ -30,7 +31,7 @@ export default function Wortilizer() {
   )
 
   function handleAddWordAction(word: string) {
-    const article = getWordArticle(word as string)
+    const article = getWordArticle(word)
 
     if (!article) {
       console.error('Article not found')
@@ -38,16 +39,13 @@ export default function Wortilizer() {
     }
 
     // If a word is already in the vocab, move it to first position
-    const foundWortschatzEntry = wortschatz.find(
+    const wortschatzEntryIndex = wortschatz.findIndex(
       (wortschatzEntry) => wortschatzEntry.word === word
     )
-    if (foundWortschatzEntry) {
-      saveWortschatz((prevWortschatz) => {
-        const restPrevWortschatz = prevWortschatz.filter(
-          (wortschatzEntry) => wortschatzEntry.word !== word
-        )
-        return [foundWortschatzEntry, ...restPrevWortschatz]
-      })
+    if (wortschatzEntryIndex >= 0) {
+      saveWortschatz((prevWortschatz) =>
+        moveIndexToFirst(prevWortschatz, wortschatzEntryIndex)
+      )
       return
     }
 
