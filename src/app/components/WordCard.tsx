@@ -5,6 +5,7 @@ import {
 
 type WordCardProps = {
   wortschatzEntry: WortschatzEntry
+  animate?: boolean
 }
 
 // Tailwind class names need to be explicitly coded to be included in the CSS code
@@ -16,10 +17,11 @@ const articleToClassName: Record<GermanNounArticle, string> = {
 
 export default function WordCard({
   wortschatzEntry: { article, word },
+  animate,
 }: WordCardProps) {
   return (
     <article
-      className={`animate-wiggle flex justify-center items-center aspect-video text-xl sm:text-2xl text-blue-900 capitalize border transition-all ${articleToClassName[article]}`}
+      className={`flex justify-center items-center aspect-video text-xl sm:text-2xl text-blue-900 capitalize border transition-all ${articleToClassName[article]} ${animate ? 'animate-wiggle' : ''}`}
     >
       {article} {word}
     </article>
