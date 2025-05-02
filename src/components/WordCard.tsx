@@ -1,4 +1,5 @@
 import { GermanNounArticle, WortschatzEntry } from '@/types/wortilizer.types'
+import Card from '@/components/ui/Card'
 
 type WordCardProps = {
   wortschatzEntry: WortschatzEntry
@@ -16,11 +17,12 @@ export default function WordCard({
   wortschatzEntry: { article, word },
   animate,
 }: WordCardProps) {
+  const articleClassName = articleToClassName[article]
+  const animationClassName = animate ? 'animate-wiggle' : ''
+
   return (
-    <article
-      className={`flex justify-center items-center aspect-video text-xl sm:text-2xl text-blue-900 capitalize border transition-all ${articleToClassName[article]} ${animate ? 'animate-wiggle' : ''}`}
-    >
+    <Card className={`${articleClassName} ${animationClassName}`}>
       {article} {word}
-    </article>
+    </Card>
   )
 }

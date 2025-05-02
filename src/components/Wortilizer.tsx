@@ -60,11 +60,7 @@ export default function Wortilizer() {
   }
 
   return (
-    <div className="flex flex-col gap-4 md:gap-8">
-      <header>
-        <h1 className="text-4xl mb-2">Wörtilizer</h1>
-        <p>Zaps your German vocab into shape ⚡🇩🇪</p>
-      </header>
+    <div className="flex flex-col gap-4">
       <WordForm onAddWordAction={handleAddWordAction} />
       <WordList wortschatz={wortschatz} />
     </div>

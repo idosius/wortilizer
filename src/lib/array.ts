@@ -8,3 +8,16 @@ export function moveIndexToFirst<T>(array: T[], index: number): T[] {
   newArray.unshift(item)
   return newArray
 }
+
+// Reference: ChatGPT
+export function getRandomIndices(i: number): number[] {
+  const indices = Array.from({ length: i }, (_, index) => index)
+
+  // Fisher-Yates shuffle
+  for (let j = indices.length - 1; j > 0; j--) {
+    const rand = Math.floor(Math.random() * (j + 1))
+    ;[indices[j], indices[rand]] = [indices[rand], indices[j]]
+  }
+
+  return indices
+}
