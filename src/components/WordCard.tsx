@@ -1,7 +1,4 @@
-import {
-  GermanNounArticle,
-  WortschatzEntry,
-} from '@/app/types/wortilizer.types'
+import { GermanNounArticle, WortschatzEntry } from '@/types/wortilizer.types'
 
 type WordCardProps = {
   wortschatzEntry: WortschatzEntry

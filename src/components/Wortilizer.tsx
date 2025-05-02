@@ -1,13 +1,13 @@
 'use client'
 
-import WordForm from '@/app/components/WordForm'
-import WordList from '@/app/components/WordList'
-import { WortschatzEntry, Wortschatz } from '@/app/types/wortilizer.types'
+import WordForm from '@/components/WordForm'
+import WordList from '@/components/WordList'
+import { WortschatzEntry, Wortschatz } from '@/types/wortilizer.types'
 import { Genders, WordsInfo } from 'german-words-dict'
 import { getGenderGermanWord } from 'german-words'
 import GermanWordsList from 'german-words-dict/dist/words.json'
 import { useLocalStorage } from '@uidotdev/usehooks'
-import { moveIndexToFirst } from '@/app/utils/array'
+import { moveIndexToFirst } from '@/lib/array'
 
 const genderArticles: Record<Genders, WortschatzEntry['article']> = {
   M: 'der',

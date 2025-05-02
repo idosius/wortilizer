@@ -1,7 +1,7 @@
 'use client'
 
-import { Wortschatz } from '@/app/types/wortilizer.types'
-import WordCard from '@/app/components/WordCard'
+import { Wortschatz } from '@/types/wortilizer.types'
+import WordCard from '@/components/WordCard'
 
 type WordListProps = { wortschatz: Wortschatz }
 

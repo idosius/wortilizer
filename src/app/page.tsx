@@ -1,6 +1,6 @@
 'use client'
 
-import Wortilizer from '@/app/components/Wortilizer'
+import Wortilizer from '@/components/Wortilizer'
 import { useIsClient } from '@uidotdev/usehooks'
 
 export default function Home() {
