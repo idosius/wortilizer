@@ -1,10 +1,17 @@
 # Wörtilizer
 
-Wörtilizer is an open source web app to help you build your German vocabulary and remember noun articles, wort für wort.
+Wörtilizer is an open source web app to help you build your German vocabulary and remember der-die-das noun articles, Wort für Wort.
 
-I built it to solve my own problem and also exercise some coding while being in between jobs.
+## Features
 
-## Demo
+* Create your own private vocabulary in German
+* Automatically recognize der-die-das noun articles
+* Easily memorize words and articles with big color coded cards
+* Exercise your vocab memory via a simple quiz
+* No installation, login or signup required - vocab saved in browser's local storage
+* Works on all devices, including mobile, laptop, and desktops
+
+## Live Web App
 
 https://wortilizer.vercel.app/
 
@@ -29,3 +36,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ```bash
 npm run build
 ```
+
+## Contribution
+
+If you would like to contribute to this project, please feel free to open a PR.
