@@ -34,8 +34,7 @@ export default function Wortilizer() {
     const article = getWordArticle(word)
 
     if (!article) {
-      console.error('Article not found')
-      return
+      throw new Error(`"${word}" wurde im Wörterbuch nicht gefunden.`)
     }
 
     // If a word is already in the vocab, move it to first position
