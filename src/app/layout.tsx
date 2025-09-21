@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Link from 'next/link'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   title: 'Wörtilizer',
@@ -23,14 +24,14 @@ export default function RootLayout({
             <Link href="/">Wörtilizer</Link>
           </h1>
           <p>Zaps your German vocab into shape ⚡🇩🇪</p>
-          <nav>
+          <nav className="flex gap-2">
             <Link
               href="/"
               className="text-blue-600 hover:text-blue-800 underline font-medium transition-colors"
             >
               Home
-            </Link>{' '}
-            |{' '}
+            </Link>
+            <span>|</span>
             <Link
               href="/quiz"
               className="text-blue-600 hover:text-blue-800 underline font-medium transition-colors"
@@ -48,6 +49,7 @@ export default function RootLayout({
             View on GitHub
           </a>
         </footer>
+        <Analytics />
       </body>
     </html>
   )
