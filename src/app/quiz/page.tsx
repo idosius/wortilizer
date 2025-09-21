@@ -1,12 +1,12 @@
 'use client'
 
-import { useIsClient } from '@uidotdev/usehooks'
-import WortilizerQuiz from '@/components/WortilizerQuiz'
+import dynamic from 'next/dynamic'
+
+const WortilizerQuiz = dynamic(() => import('@/components/WortilizerQuiz'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+})
 
 export default function HomePage() {
-  // Fix "is a client only hook" error
-  // Reference: https://github.com/uidotdev/usehooks/issues/218#issuecomment-1681205155
-  const isClient = useIsClient()
-
-  return <>{isClient && <WortilizerQuiz />}</>
+  return <WortilizerQuiz />
 }

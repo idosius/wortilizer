@@ -6,7 +6,7 @@ import { WortschatzEntry, Wortschatz } from '@/types/wortilizer.types'
 import { Genders, WordsInfo } from 'german-words-dict'
 import { getGenderGermanWord } from 'german-words'
 import GermanWordsList from 'german-words-dict/dist/words.json'
-import { useLocalStorage } from '@uidotdev/usehooks'
+import { useLocalStorage } from 'usehooks-ts'
 import { moveIndexToFirst } from '@/lib/array'
 
 const genderArticles: Record<Genders, WortschatzEntry['article']> = {

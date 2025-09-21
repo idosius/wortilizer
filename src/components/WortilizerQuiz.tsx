@@ -1,4 +1,4 @@
-import { useLocalStorage } from '@uidotdev/usehooks'
+import { useLocalStorage } from 'usehooks-ts'
 import {
   GermanNounArticle,
   Wortschatz,
