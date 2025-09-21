@@ -33,13 +33,17 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Building
 
+Set the correct environment variables in `.env` or your CI/CD:
+
+```bash
+cp .env.example .env
+```
+
+Build:
+
 ```bash
 npm run build
 ```
-
-## Deployment
-
-Set the correct environment variables as defined in `.env.example`
 
 ## Contribution
 
