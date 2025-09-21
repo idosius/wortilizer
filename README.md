@@ -4,12 +4,12 @@ Wörtilizer is an open source web app to help you build your German vocabulary a
 
 ## Features
 
-* Create your own private vocabulary in German
-* Automatically recognize der-die-das noun articles
-* Easily memorize words and articles with big color coded cards
-* Exercise your vocab memory via a simple quiz
-* No installation, login or signup required - vocab saved in browser's local storage
-* Works on all devices, including mobile, laptop, and desktops
+- Create your own private vocabulary in German
+- Automatically recognize der-die-das noun articles
+- Easily memorize words and articles with big color coded cards
+- Exercise your vocab memory via a simple quiz
+- No installation, login or signup required - vocab saved in browser's local storage
+- Works on all devices, including mobile, laptop, and desktops
 
 ## Live Web App
 
@@ -36,6 +36,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ```bash
 npm run build
 ```
+
+## Deployment
+
+Set the correct environment variables as defined in `.env.example`
 
 ## Contribution
 
