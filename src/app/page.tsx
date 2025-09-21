@@ -1,12 +1,16 @@
 'use client'
 
-import Wortilizer from '@/components/Wortilizer'
-import { useIsClient } from '@uidotdev/usehooks'
+import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
+
+const Wortilizer = dynamic(() => import('@/components/Wortilizer'), {
+  ssr: false,
+})
 
 export default function HomePage() {
-  // Fix "is a client only hook" error
-  // Reference: https://github.com/uidotdev/usehooks/issues/218#issuecomment-1681205155
-  const isClient = useIsClient()
-
-  return <>{isClient && <Wortilizer />}</>
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Wortilizer />
+    </Suspense>
+  )
 }

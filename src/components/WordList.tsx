@@ -1,5 +1,3 @@
-'use client'
-
 import { Wortschatz } from '@/types/wortilizer.types'
 import WordCard from '@/components/WordCard'
 
