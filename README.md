@@ -2,6 +2,8 @@
 
 Wörtilizer is an open source web app to help you build your German vocabulary and remember der-die-das noun articles, Wort für Wort.
 
+<img width="1792" height="1052" alt="Wörtilizer screenshot" src="https://github.com/user-attachments/assets/4a91d109-d9f7-4a8c-a9c0-e0067ffe73e1" />
+
 ## Features
 
 - Create your own private vocabulary in German
