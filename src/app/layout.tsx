@@ -19,11 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="container mx-auto px-4 py-4 md:py-8 min-h-screen flex flex-col gap-4">
-        <header className="flex flex-col gap-2">
-          <h1 className="text-4xl">
+        <header className="flex gap-4 items-baseline">
+          <h1 className="text-2xl md:text-4xl leading-none">
             <Link href="/">Wörtilizer</Link>
           </h1>
-          <p>Zaps your German vocab into shape ⚡🇩🇪</p>
           <nav className="flex gap-2">
             <Link
               href="/"
