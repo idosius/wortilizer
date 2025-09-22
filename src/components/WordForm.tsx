@@ -54,7 +54,7 @@ export default function WordForm({ onAddWordAction }: WordFormProps) {
         role="alert"
         aria-live="assertive"
         aria-atomic="true"
-        className="text-sm h-5"
+        className="text-sm h-7 md:h-5"
       >
         {error && <span>❌ {error}</span>}
       </div>
