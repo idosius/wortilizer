@@ -2,18 +2,11 @@
 
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
+import { sanitizeWord } from '@/lib/string'
 import { useState } from 'react'
 
 type WordFormProps = {
   onAddWordAction: (word: string) => void
-}
-
-function capitalizeFirstLetter(str: string) {
-  return str[0].toUpperCase() + str.slice(1).toLowerCase()
-}
-
-function sanitizeWord(word: string) {
-  return capitalizeFirstLetter(word.trim())
 }
 
 export default function WordForm({ onAddWordAction }: WordFormProps) {
@@ -21,15 +14,19 @@ export default function WordForm({ onAddWordAction }: WordFormProps) {
 
   function handleSubmit(formData: FormData) {
     const word = formData.get('word')
-    if (!word) {
+    if (!word || typeof word !== 'string') {
       return
     }
 
     try {
-      const sanitizedWord = sanitizeWord(word as string)
+      const sanitizedWord = sanitizeWord(word)
+      if (!sanitizedWord) {
+        return
+      }
       onAddWordAction(sanitizedWord)
-    } catch (e) {
-      setError(String(e).replace('Error', 'Fehler'))
+    } catch (error) {
+      const fehler = String(error).replace('Error', 'Fehler')
+      setError(fehler)
     }
   }
 
