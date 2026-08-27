@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "!*.{js,jsx,ts,tsx,mjs,cjs}": "prettier --write --ignore-unknown"
   },
   "scripts": {
     "dev": "next dev --turbopack",
